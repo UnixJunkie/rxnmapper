@@ -143,7 +143,7 @@ if __name__ == '__main__':
         if not is_balanced(react_mols, prod_mols):
             print("IMBALANCED\t%s" % line, file = sys.stderr)
         cd, centers = compare_bonds(react_mols, prod_mols)
-        print("%s\t%.1f\t%s" % (line, cd, centers), file = output)
+        print("%s\t%.1f_%s" % (line, cd, centers), file = output)
         count += 1
     after = time.time()
     dt = after - before
